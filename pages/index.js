@@ -25,6 +25,19 @@ export default function Home({ allPostsData }) {
 
                 <Search documents={allPostsData}/>
 
+                <ul>
+                    {allPostsData.map(({ id, date, title, text }) => (
+                        <li key={id} className={styles.grid}>
+                            <Link href={`/posts/${id}`}>
+                                <div className={styles.card}>
+                                    <h2>{title}</h2>
+                                    <p>{text}</p>
+                                    Posted on: {date}
+                                </div>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
             </main>
             <footer className={styles.footer}>
                 <a href="https://www.classyllama.com/" target="_blank">
