@@ -22,6 +22,9 @@ export default function Home({ allPostsData }) {
                 <p className={styles.description}>
                   Through this tool you can easily search for posts!
                 </p>
+
+                <Search documents={allPostsData}/>
+
             </main>
             <footer className={styles.footer}>
                 <a href="https://www.classyllama.com/" target="_blank">
